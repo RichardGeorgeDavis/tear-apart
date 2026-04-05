@@ -1,0 +1,8 @@
+{
+  "name": "tear-apart",
+  "runtime": {
+    "mode": "direct",
+    "command": "npm run dev",
+    "port": 4173
+  }
+}
