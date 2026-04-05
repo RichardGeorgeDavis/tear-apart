@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const cwd = process.cwd();
-const sourceDir = path.resolve(cwd, "mirror");
+const sourceDir = path.resolve(cwd, "public");
 const distDir = path.resolve(cwd, "dist");
 
 async function exists(filePath) {
@@ -15,7 +15,7 @@ async function exists(filePath) {
 }
 
 if (!(await exists(path.join(sourceDir, "index.html")))) {
-  console.error("Missing mirror/index.html. Run `npm run clone` first.");
+  console.error("Missing public/index.html. Run `npm run clone` first.");
   process.exit(1);
 }
 
@@ -27,7 +27,7 @@ await fs.cp(sourceDir, distDir, {
   filter(source) {
     const base = path.basename(source);
     if (base === ".DS_Store") return false;
-    if (base === ".rip-manifest.json") return false;
+    if (base === ".clone-manifest.json") return false;
     if (base === ".verify.png") return false;
     return true;
   }

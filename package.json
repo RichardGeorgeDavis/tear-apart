@@ -1,15 +1,14 @@
 {
-  "name": "tear-apart-rip",
+  "name": "tear-apart-clone",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build-dist.mjs",
-    "clone": "node scripts/rip-site.mjs",
+    "clone": "node scripts/clone-site.mjs",
     "dev": "node scripts/dev-server.mjs",
     "preview": "ROOT_DIR=dist PORT=4174 node scripts/dev-server.mjs",
-    "rip": "node scripts/rip-site.mjs",
     "setup": "npm run clone",
-    "verify": "node scripts/verify-mirror.mjs"
+    "verify": "node scripts/verify-public.mjs"
   },
   "devDependencies": {
     "playwright": "^1.59.1"

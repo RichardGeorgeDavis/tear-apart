@@ -5,8 +5,8 @@ import { startStaticServer } from "./server-utils.mjs";
 
 const targetUrl = new URL(process.env.TARGET_URL ?? "https://tearapart.activetheory.dev/");
 const targetOrigin = targetUrl.origin;
-const outputDir = path.resolve(process.cwd(), "mirror");
-const manifestPath = path.join(outputDir, ".rip-manifest.json");
+const outputDir = path.resolve(process.cwd(), "public");
+const manifestPath = path.join(outputDir, ".clone-manifest.json");
 const SETTINGS_STYLE = `
 <style id="codex-settings-style">
   :root {
@@ -546,16 +546,16 @@ try {
 
 await writeManifest({
   source: targetUrl.href,
-  rippedAt: new Date().toISOString(),
+  clonedAt: new Date().toISOString(),
   requestCount: requestedUrls.length,
   localValidationMissing: finalMissingLocalPaths
 });
 
 if (finalMissingLocalPaths.length) {
-  console.warn("Mirror still has missing local files:");
+  console.warn("Public runtime still has missing local files:");
   for (const pathname of finalMissingLocalPaths) {
     console.warn(`- ${pathname}`);
   }
 }
 
-console.log(`Rip complete. Files saved to ${outputDir}`);
+console.log(`Clone complete. Files saved to ${outputDir}`);

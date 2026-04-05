@@ -14,19 +14,18 @@ npm run dev
 This project is a local clone pipeline for the deployed site:
 
 - `npm install` installs the small local toolchain.
-- `npm run clone` refreshes `mirror/` from the live deployment.
+- `npm run clone` refreshes `public/` from the live deployment.
 - `npm run build` copies the current clone into `dist/`.
-- `npm run dev` serves `mirror/` locally.
+- `npm run dev` serves `public/` locally.
 
 ## Commands
 
-- `npm run clone` captures the live page's runtime requests from `https://tearapart.activetheory.dev/`, downloads the required same-origin files into `mirror/`, and validates the result locally.
+- `npm run clone` captures the live page's runtime requests from `https://tearapart.activetheory.dev/`, downloads the required same-origin files into `public/`, and validates the result locally.
 - `npm run build` copies the cloned runtime into `dist/` for static hosting or handoff.
-- `npm run dev` serves the cloned site from `mirror/` on `http://127.0.0.1:4173`.
+- `npm run dev` serves the cloned site from `public/` on `http://127.0.0.1:4173`.
 - `PORT=4180 npm run dev` starts the cloned site on a different local port when `4173` is already in use.
 - `npm run preview` serves `dist/` on `http://127.0.0.1:4174`.
-- `npm run rip` is kept as an alias for `npm run clone`.
-- `npm run verify` replays the local mirror in Playwright and reports missing same-origin files.
+- `npm run verify` replays the local `public/` runtime in Playwright and reports missing same-origin files.
 
 ## Git
 
@@ -56,6 +55,6 @@ git status
 
 ## Layout
 
-- `mirror/` is the cloned deployed runtime.
+- `public/` is the cloned deployed runtime.
 - `dist/` is the build output for static serving.
 - `scripts/` contains the clone, serve, and validation utilities.

@@ -2,7 +2,7 @@ import path from "node:path";
 import { chromium } from "playwright";
 import { startStaticServer } from "./server-utils.mjs";
 
-const rootDir = path.resolve(process.cwd(), "mirror");
+const rootDir = path.resolve(process.cwd(), "public");
 const screenshotPath = path.join(rootDir, ".verify.png");
 
 const server = await startStaticServer({ rootDir, host: "127.0.0.1", port: 0, quiet: true });
@@ -42,5 +42,5 @@ if (missing.size) {
   }
   process.exitCode = 1;
 } else {
-  console.log("Mirror verified with no missing same-origin requests.");
+  console.log("Public runtime verified with no missing same-origin requests.");
 }
