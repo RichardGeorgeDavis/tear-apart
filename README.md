@@ -8,7 +8,6 @@ Recreated interactive prototype of the Tear Apart experience, preserved as a loc
 
 ![Tear Apart preview](./preview.gif)
 
-Local clone of the deployed site at [tearapart.activetheory.dev](https://tearapart.activetheory.dev/).
 
 ## Setup
 
