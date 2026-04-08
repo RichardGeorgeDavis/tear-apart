@@ -1,5 +1,9 @@
 # Tear Apart
 
+Preview: [proto.lucidity.design/sites/tear-apart](https://proto.lucidity.design/sites/tear-apart)
+
+![Tear Apart cover](./cover.png)
+
 Local clone of the deployed site at [tearapart.activetheory.dev](https://tearapart.activetheory.dev/).
 
 ## Setup
@@ -58,3 +62,5 @@ git status
 - `public/` is the cloned deployed runtime.
 - `dist/` is the build output for static serving.
 - `scripts/` contains the clone, serve, and validation utilities.
+
+Cloned from [tearapart.activetheory.dev](https://tearapart.activetheory.dev/).
