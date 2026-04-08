@@ -2,7 +2,11 @@
 
 Preview: [proto.lucidity.design/sites/tear-apart](https://proto.lucidity.design/sites/tear-apart)
 
+Recreated interactive prototype of the Tear Apart experience, preserved as a local static clone with scripts for refresh, verification, and preview.
+
 ![Tear Apart cover](./cover.png)
+
+![Tear Apart preview](./preview.gif)
 
 Local clone of the deployed site at [tearapart.activetheory.dev](https://tearapart.activetheory.dev/).
 
